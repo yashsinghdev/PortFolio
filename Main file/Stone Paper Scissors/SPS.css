@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+  height: 5rem;
+  width: 100%;
+  border-radius: 10px;
+  line-height: 5rem;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgb(11, 39, 37),
+    rgb(33, 94, 91)
+  ); /* Added gradient */
+  font-size: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slide-in 1s ease-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  /* background: linear-gradient(90deg, rgb(11, 39, 37), rgb(33, 94, 91)); */
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+
+  background-color: inherit !important;
+}
+
+header nav a:hover {
+  color: rgb(237, 10, 146);
+}
+
+/* Container and Images */
+.contaner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.contaner img {
+  height: 170px;
+  width: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.contaner img:hover {
+  background-color: rgb(237, 10, 146);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: 5px solid gold;
+  transform: scale(1.1); /* Add hover scaling */
+}
+
+/* Score Section */
+.score {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  gap: 80px;
+  margin: 2rem 0;
+}
+
+#user-score,
+#AI-score,
+#Draw-score,
+#Total {
+  margin: 10px;
+  font-size: 1.9rem;
+  color: rgb(33, 94, 91);
+  font-weight: bold;
+}
+
+/* Message Box */
+.msg {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: 10px solid transparent;
+  background: linear-gradient(90deg, rgb(165, 42, 128), rgb(237, 10, 146));
+  display: inline-block;
+  border-radius: 20px;
+  margin-top: 5rem;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+  animation: fade-in 1s ease-out;
+}
+
+/* Keyframe Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
